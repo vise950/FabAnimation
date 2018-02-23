@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         fab.setOnClickListener {
             ActivityOptions.makeSceneTransitionAnimation(this@MainActivity,
-                    fab, getString(R.string.transaction_name))?.let {
+                    fab, fab.transitionName)?.let {
                 startActivity(Intent(this@MainActivity, SecondActivity::class.java), it.toBundle())
             }
         }
